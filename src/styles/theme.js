@@ -10,7 +10,7 @@ export const theme = {
     gray200: "#E9ECEF",
   },
   layout: {
-    headerHeight: "60px",
-    sidebarWidth: "240px",
+    headerHeight: "108px",
+    sidebarWidth: "252px",
   },
 };

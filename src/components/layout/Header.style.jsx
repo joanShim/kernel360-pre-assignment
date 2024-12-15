@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { theme } from "../../styles/theme";
 
 export const Header = styled.header`
-  height: 108px;
+  height: ${theme.layout.headerHeight};
   display: flex;
   padding: 0 48px;
   justify-content: space-between;

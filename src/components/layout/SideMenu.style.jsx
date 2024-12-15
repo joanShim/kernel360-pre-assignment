@@ -1,20 +1,26 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { theme } from "../../styles/theme";
+import { Link } from "react-router-dom";
 
 export const SideMenu = styled.ul`
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   gap: 24px;
-  width: 252px;
+  width: ${theme.layout.sidebarWidth};
   height: 100%;
   min-height: calc(100vh - 108px);
   border-right: 1px solid #f5f5f7;
   padding: 32px;
   margin: 0;
+  background-color: #fff;
 `;
 
 export const MenuItem = styled.li`
   list-style: none;
   cursor: pointer;
+`;
+
+export const MenuLink = styled(Link)`
   display: flex;
   align-items: center;
   gap: 12px;
@@ -33,6 +39,17 @@ export const MenuItem = styled.li`
     background-color: #f5f5f7;
     color: #141522;
   }
+
+  ${(props) =>
+    props.$disabled &&
+    css`
+      cursor: not-allowed;
+
+      &:hover {
+        background-color: transparent;
+        color: #8e92bc;
+      }
+    `}
 `;
 
 export const MenuLabel = styled.span`
