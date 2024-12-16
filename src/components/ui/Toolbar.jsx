@@ -5,7 +5,6 @@ export default function Toolbar() {
     <>
       <S.Toolbar>
         <S.SearchBar type="text" placeholder="Search Mentors" />
-
         <S.ButtonWrapper>
           <S.ToolButton>
             <LayoutPanelLeft size={24} />
